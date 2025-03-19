@@ -3,7 +3,7 @@ https://pandas.pydata.org/docs/user_guide/index.html
 
 ### **1. Basic Info & Summary**
 - df.head(n): View the first n rows (default is 5).
-*Example:* df.head(3) will show the first three rows of the DataFrame.
+  - *Example:* df.head(3) will show the first three rows of the DataFrame.
 
 - df.tail(n): View the last n rows.
 *Example:* df.tail(2) will show the last two rows of the DataFrame.
