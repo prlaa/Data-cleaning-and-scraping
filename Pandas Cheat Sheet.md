@@ -18,7 +18,7 @@ https://pandas.pydata.org/docs/user_guide/index.html
 - df.iloc[row_index, col_index]: Select by index position.
 - df[df['column'] > value]: Filter rows based on a condition.
 - df.query('column > value'): Another way to filter rows.
-- 
+ 
 ### *3. Sorting & Ordering*
 - df.sort_values(by='column'): Sort values by a column.
 - df.sort_values(by='column', ascending=False): Sort in descending order.
@@ -32,6 +32,7 @@ https://pandas.pydata.org/docs/user_guide/index.html
 - df['column'].min(): Minimum value.
 - df['column'].max(): Maximum value.
 - df['column'].idxmax(): Index of the max value.
+  - df['Mathematics'].idxmax(): Get the index of the student with the highest grade in Mathematics
 - df['column'].idxmin(): Index of the min value.
 
 ### *5. Handling Missing Data*
