@@ -25,7 +25,7 @@ You are provided with a number of CSV files in the "Files/data" folder, which of
 - 'home_gym_2018_2023'	Index representing the popularity of the keyword 'home gym' during the 5 year period.
 
 ## ----------- CODE -----------
-import pandas as pd
+```import pandas as pd
 ##### #When was the global search for 'workout' at its peak? Save the year of peak interest as a string named year_str in the format "yyyy".
 df= pd.read_csv(r'data/workout.csv')
 print(df)
@@ -70,3 +70,4 @@ print(phi_mal)
 #Selects the country with the highest index value in the 'home_workout_2018_2023' column from the phi_mal DataFrame and prints the name of that country.
 home_workout_geo = phi_mal.loc[phi_mal['home_workout_2018_2023'].idxmax()]['Country']
 print(home_workout_geo)
+```
