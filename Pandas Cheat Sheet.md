@@ -1,37 +1,20 @@
 # Pandas Cheat Sheet
-https://pandas.pydata.org/docs/user_guide/index.html
+-[Pandas Documentation](https://pandas.pydata.org/docs/user_guide/index.html)
+-[Pandas Dataframe Documentation](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)
 
 ### **1. Basic Info & Summary**
 
-| Function        | Description                   | Example                                                                      | 
-|-----------------|-------------------------------|------------------------------------------------------------------------------|
-| df.head(n)      | View the first n rows          | df.head(3) will show the first three rows of the DataFrame                    | 
-| df.tail(n)      | View the last n rows          | df.tail(2) will show the last two rows of the DataFrame.                     | 
-| df.shape        | Get the number (rows,columns) |  If df.shape returns (100, 5), it means there are 100 rows and 5 columns.    |                    
-|             |                             |                  
-
-
-
-- : 
-    - *Example:* 
-
-- df.info(): Display a summary of the DataFrame (data types, non-null values).
-    - *Example:* Running df.info() will show the column names, their data types, and the number of non-null values in each.
-
-- df.describe(): Get summary statistics for numeric columns.
-    - *Example:* df.describe() will show the count, mean, min, max, and quartiles for all numerical columns.
-
-- df.columns: List all column names (as a Pandas Index object).
-    - *Example:* If df.columns returns Index(['name', 'age', 'city'], dtype='object'), it means the DataFrame has columns named 'name', 'age', and 'city'.
-
-- df.columns.tolist(): List all columns as a Python list.
-    - *Example:* df.columns.tolist() returns ['name', 'age', 'city'], making it easier to use in loops or list operations.
-
-- df.dtypes: Show data types of each column.
-    - *Example:* If df.dtypes shows 'age' as int64 and 'city' as object', it means 'age' is numerical and 'city' is categorical (string).
-
-- df.memory_usage(): Check memory usage of each column.
-    - *Example:* df.memory_usage() will return the memory used by each column, useful for optimizing large datasets.
+| Function            | Description                   | Example                                                                      | 
+|-----------------    |-------------------------------|------------------------------------------------------------------------------|
+| df.head(n)          | View the first n rows          | df.head(3) will show the first three rows of the DataFrame                    | 
+| df.tail(n)          | View the last n rows          | df.tail(2) will show the last two rows of the DataFrame.                     | 
+| df.shape            | Get the number (rows,columns) |  If df.shape returns (100, 5), it means there are 100 rows and 5 columns.    |                    
+| df.info()           |Display a summary of the DataFrame (data types, non-null values) | df.info() will show the column names, their data types, and the number of non-null values in each.                 
+|df.describe()        |Get summary statistics for numeric columns.              | df.describe() will show the count, mean, min, max, and quartiles for all numerical columns.  
+|df.columns           | List all column names (as a Pandas Index object).       | If df.columns returns Index(['name', 'age', 'city'], dtype='object'), it means the DataFrame has columns named 'name', 'age', and 'city'.  
+|df.columns.tolist()  |List all columns as a Python list.                        |  df.columns.tolist() returns ['name', 'age', 'city'], making it easier to use in loops or list operations. 
+|df.dtypes            |Show data types of each column.                           |  If df.dtypes shows 'age' as int64 and 'city' as object', it means 'age' is numerical and 'city' is categorical (string). 
+|df.memory_usage()    |Check memory usage of each column.                        | df.memory_usage() will return the memory used by each column, useful for optimizing large datasets.
 
 ### **2. Selecting & Filtering Data**
 - df['column_name']: Select a single column.
