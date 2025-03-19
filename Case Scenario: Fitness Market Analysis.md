@@ -27,7 +27,9 @@ You are provided with a number of CSV files in the "Files/data" folder, which of
 ## ----------- CODE -----------
 ```ruby
 import pandas as pd
+
 #When was the global search for 'workout' at its peak? Save the year of peak interest as a string named year_str in the format "yyyy".
+
 df= pd.read_csv(r'data/workout.csv')
 print(df)
 max_value = df['workout_worldwide'].max()
@@ -38,7 +40,9 @@ year_str = str(df.iloc[25, 0])[:4]
 print('Year of max search was:',year_str)
 ```
 ```ruby
+
 #Of the keywords available, what was the most popular during the covid pandemic, and what is the most popular now? Save your answers as variables called peak_covid and current respectively.
+
 df= pd.read_csv(r'data/three_keywords.csv')
 #Change 'month' column to datetime format
 df['month'] = pd.to_datetime(df['month'], format='%Y-%m')
@@ -55,7 +59,9 @@ print(f"Peak COVID Keyword: {peak_covid}")
 print(f"Current Most Popular Keyword: {current}")
 ```
 ```ruby
+
 #What country has the highest interest for workouts among the following: United States, Australia, or Japan? Save your answer as top_country.
+
 df=pd.read_csv(r'data/workout_geo.csv')
 print(df)
 countries_data = df[df['country'].isin(['United States', 'Japan', 'Australia'])]
@@ -64,6 +70,7 @@ top_country = countries_data.loc[countries_data['workout_2018_2023'].idxmax()]['
 print(top_country)
 ```
 ```ruby
+
 #You'd be interested in expanding your virtual home workouts offering to either the Philippines or Malaysia. Which of the two countries has the highest interest in home workouts? Identify the country and save it as home_workout_geo.
 
 df=pd.read_csv(r'data/three_keywords_geo.csv')
