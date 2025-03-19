@@ -2,14 +2,18 @@
 https://pandas.pydata.org/docs/user_guide/index.html
 
 ### **1. Basic Info & Summary**
-- df.head(n): View the first n rows (default is 5).
-  - *Example:* df.head(3) will show the first three rows of the DataFrame.
 
-- df.tail(n): View the last n rows.
-    - *Example:* df.tail(2) will show the last two rows of the DataFrame.
+| Function        | Description                   | Example                                                                      | 
+|-----------------|-------------------------------|------------------------------------------------------------------------------|
+| df.head(n)      | View the first n rows          | df.head(3) will show the first three rows of the DataFrame                    | 
+| df.tail(n)      | View the last n rows          | df.tail(2) will show the last two rows of the DataFrame.                     | 
+| df.shape        | Get the number (rows,columns) |  If df.shape returns (100, 5), it means there are 100 rows and 5 columns.    |                    
+|             |                             |                  
 
-- df.shape: Get the number of rows and columns.
-    - *Example:* If df.shape returns (100, 5), it means there are 100 rows and 5 columns.
+
+
+- : 
+    - *Example:* 
 
 - df.info(): Display a summary of the DataFrame (data types, non-null values).
     - *Example:* Running df.info() will show the column names, their data types, and the number of non-null values in each.
