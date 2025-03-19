@@ -1,6 +1,6 @@
 # Pandas Cheat Sheet
--[Pandas Documentation](https://pandas.pydata.org/docs/user_guide/index.html)
--[Pandas Dataframe Documentation](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)
+- [Pandas Documentation](https://pandas.pydata.org/docs/user_guide/index.html)
+- [Pandas Dataframe Documentation](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)
 
 ### **1. Basic Info & Summary**
 
