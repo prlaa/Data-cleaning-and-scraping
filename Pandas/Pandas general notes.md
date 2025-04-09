@@ -1,4 +1,4 @@
-#Pandas Notes
+# Pandas Notes
 Pandas = NumPy + Matplotlib
 
 ### Exploring a Dataframe
