@@ -3,7 +3,7 @@ Pandas = NumPy + Matplotlib
 
 ### Exploring a Dataframe
 What each function returns
-´´´ruby
+```ruby
 - df.head() -  first 5 rows
 - df.info() - column names, data types and nulls
 - df.shape - (row, column) of df
@@ -11,12 +11,14 @@ What each function returns
 - df.values - data values in a 2D array
 - df.columns - column names
 - df.index - row number or name
-´´´´
+```
 ### Sorting and subsetting
+```ruby
 - df.sort_values("column name", ascending=False) - sort values of selected column
 - df.sort_values(["column1, column2]), ascending=[True, False]) - Sort by multiple variables 
 - df["column"] - select column
 - df[["column1", "column2"]] - select multiple columns
+```
 
 ### Filtering and subsetting data
 Easiest done by applying logical filters
