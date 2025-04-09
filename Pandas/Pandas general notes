@@ -17,11 +17,11 @@ df.sort_values("column name", ascending=False) - sort values of selected column
 df["column"] - select column
 - df[["column1", "column2"]] - select multiple columns
 
-###Filtering and subsetting data
+### Filtering and subsetting data
 Easiest by applying logical filters
-df["column1"] > 50 - selects and filters column1 (values above 50) 
+df[df["column1"] > 50] - selects and filters column1 (values above 50) 
 
-####Subsetting data
+#### Subsetting data
 df[df["column1"] > 50] - filters column 1, includes all applicable data (values above 50)
 df[df["column1] == "Filter"] - filters column 1, includes all applicable data (values that equal to string "Filter")
 df[df["column1] > "2015-01-01"] - filters column 1, includes all applicable data (dates after 2015-01-01)
@@ -33,7 +33,26 @@ df[x & y]
 - can also be done in one line: df[(df["column1] > 50) & (df["column2"] == "Filter")]
 
 ##### Subsetting using .isin()
-x = df["column1"].isin(["Filter1", "Filter2"])   
+- x = df["column1"].isin(["Filter1", "Filter2"])   
+
+### New columns
+Also called mutating or transforming a Dataframe or/and feature engineering.
+- df["column1"] = df["new_column"]
+
+### Summary statistics
+- df['column'].mean()
+- .median(), .mode(), .min(), .max(), .var(), .std(), .sum()
+#### Computing percentiles
+(Using a function, example)
+def pct30(column)
+return column.quantile(0.3)
+df['column'].agg(pct30) - 30th percentile of column
+df[['column1','column2']].agg(pct30) - 30th percentile of column1 and 2
+
+
+
+
+
 
 
 
