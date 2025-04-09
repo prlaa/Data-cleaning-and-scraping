@@ -4,30 +4,35 @@ Pandas = NumPy + Matplotlib
 ### Exploring a Dataframe
 What each function returns
 ```ruby
-- df.head() -  first 5 rows
-- df.info() - column names, data types and nulls
-- df.shape - (row, column) of df
-- df.describe() - summary statistics for numerical columns
-- df.values - data values in a 2D array
-- df.columns - column names
-- df.index - row number or name
+df.head() #first 5 rows
+df.info() #column names, data types and nulls
+df.shape #(row, column) of df
+df.describe() #summary statistics for numerical columns
+df.values #data values in a 2D array
+df.columns #column names
+df.index #row number or name
 ```
+
 ### Sorting and subsetting
 ```ruby
-- df.sort_values("column name", ascending=False) - sort values of selected column
-- df.sort_values(["column1, column2]), ascending=[True, False]) - Sort by multiple variables 
-- df["column"] - select column
-- df[["column1", "column2"]] - select multiple columns
+df.sort_values("column name", ascending=False) #sort values of selected column
+df.sort_values(["column1, column2]), ascending=[True, False]) #sort by multiple variables 
+df["column"] #select column
+df[["column1", "column2"]] #select multiple columns
 ```
 
 ### Filtering and subsetting data
 Easiest done by applying logical filters
-- df[df["column1"] > 50] - selects and filters column1 (values above 50) 
+```ruby
+df[df["column1"] > 50] #selects and filters column1 (values above 50) 
+```
 
 #### Subsetting data
-- df[df["column1"] > 50] - filters column 1, includes all applicable data (values above 50)
-- df[df["column1] == "Filter"] - filters column 1, includes all applicable data (values that equal to string "Filter")
-- df[df["column1] > "2015-01-01"] - filters column 1, includes all applicable data (dates after 2015-01-01)
+```ruby
+df[df["column1"] > 50] #filters column 1, includes all applicable data (values above 50)
+df[df["column1] == "Filter"] #filters column 1, includes all applicable data (values that equal to string "Filter")
+df[df["column1] > "2015-01-01"] #filters column 1, includes all applicable data (dates after 2015-01-01)
+```
 
 ##### Subsetting based on multiple conditions
 x = df["column1"] > 50
