@@ -35,28 +35,39 @@ df[df["column1] > "2015-01-01"] #filters column 1, includes all applicable data 
 ```
 
 ##### Subsetting based on multiple conditions
+```ruby
 x = df["column1"] > 50
 y = df["column2"] == "Filter"
 df[x & y] 
-- can also be done in one line: df[(df["column1] > 50) & (df["column2"] == "Filter")]
+df[(df["column1] > 50) & (df["column2"] == "Filter")] #can also be done in one line
+```
+
 
 ##### Subsetting using .isin()
-- x = df["column1"].isin(["Filter1", "Filter2"])   
+```ruby
+df["column1"].isin(["Filter1", "Filter2"])   
+```
 
 ### New columns
 Also called mutating or transforming a Dataframe or/and feature engineering.
-- df["column1"] = df["new_column"]
+```ruby
+df["column1"] = df["new_column"]
+```
 
 ### Summary statistics
-- df['column'].mean()
-- .median(), .mode(), .min(), .max(), .var(), .std(), .sum()
+```ruby
+df['column'].mean()
+.median(), .mode(), .min(), .max(), .var(), .std(), .sum()
+```
+
 #### Computing percentiles
 (Using a function, example)
+```ruby
 def pct30(column)
 return column.quantile(0.3)
-df['column'].agg(pct30) - 30th percentile of column
-df[['column1','column2']].agg(pct30) - 30th percentile of column1 and 2
-
+df['column'].agg(pct30) #30th percentile of column
+df[['column1','column2']].agg(pct30) #30th percentile of column1 and 2
+```
 
 
 
